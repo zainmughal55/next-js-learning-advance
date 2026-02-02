@@ -8,7 +8,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ r
   }
   return (
     <main>
-      <h1>Review Detail Page {reviewId} for Product {productId}</h1>
+      <h1 className="bg-blue-400 text-white px-10 py-5">Review Detail Page {reviewId} for Product {productId}</h1>
     </main>
   );
 }
