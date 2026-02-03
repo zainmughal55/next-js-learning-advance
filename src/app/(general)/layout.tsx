@@ -2,6 +2,11 @@ import Footer from "../../components/footer";
 import Header from "../../components/header";
 import "./../globals.css";
 
+export const metadata = {
+  title: "General Layout",
+  description: "This is the general layout for the application.",
+}
+
 export default function GeneralLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
