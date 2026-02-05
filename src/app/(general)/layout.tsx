@@ -1,9 +1,13 @@
 import Footer from "../../components/footer";
 import Header from "../../components/header";
+import { Metadata } from "next";
 import "./../globals.css";
 
-export const metadata = {
-  title: "General Layout",
+export const metadata: Metadata = {
+  title: {
+    default: "General Layout",
+    template: "%s | General Layout",
+  },
   description: "This is the general layout for the application.",
 }
 

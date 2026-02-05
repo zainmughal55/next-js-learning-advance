@@ -1,6 +1,15 @@
 import Footer from "../../components/footer";
 import Header from "../../components/header";
 import "./../globals.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Marketing Layout",
+    template: "%s | Marketing Layout",
+  },
+  description: "This is the marketing layout for the application.",
+}
 
 export default function MarketingLayout({ children }: { children: React.ReactNode }) {
   return (
