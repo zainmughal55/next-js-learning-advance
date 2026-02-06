@@ -3,6 +3,11 @@ import Header from "@/src/components/header";
 import "./../globals.css";
 import Navbar from "@/src/components/navbar";
 
+export const metadata = {
+  title: "Auth Layout",
+  description: "This is the auth layout for login and register pages",
+}
+
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
