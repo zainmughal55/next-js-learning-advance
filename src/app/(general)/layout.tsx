@@ -2,6 +2,7 @@ import Footer from "../../components/footer";
 import Header from "../../components/header";
 import { Metadata } from "next";
 import "./../globals.css";
+import SimulateError from "@/src/components/simulate-error";
 
 export const metadata: Metadata = {
   title: {
@@ -12,11 +13,13 @@ export const metadata: Metadata = {
 }
 
 export default function GeneralLayout({ children }: { children: React.ReactNode }) {
+
   return (
     <html>
       <body>
         <h1 className="bg-green-500 text-white px-10 py-5">General Layout</h1>
         <Header />
+        <SimulateError />
         {children}
         <Footer />
       </body>
