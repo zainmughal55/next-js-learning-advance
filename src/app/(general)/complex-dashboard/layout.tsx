@@ -1,11 +1,13 @@
-export default function ComplexDashboardLayout({ children, users, revenue, notifications }:
+export default function ComplexDashboardLayout({ children, users, revenue, notifications, login }:
   {
     children: React.ReactNode,
     notifications: React.ReactNode,
     revenue: React.ReactNode,
     users: React.ReactNode
+    login: React.ReactNode
   }) {
-  return (
+  const isLoggedIn = true;
+  return (isLoggedIn ?
     <div className="border-2 border-emerald-600 p-5">
       <h1 className="bg-green-500 text-white px-10 py-5">Complex Dashboard Layout</h1>
       {children}
@@ -14,6 +16,7 @@ export default function ComplexDashboardLayout({ children, users, revenue, notif
         {revenue}
       </div>
       {notifications}
-    </div>
+      {isLoggedIn ? <p>Welcome back, user!</p> : <p>Please log in to see your dashboard.</p>}
+    </div> : (login)
   )
 }
