@@ -16,7 +16,6 @@ export default function ComplexDashboardLayout({ children, users, revenue, notif
         {revenue}
       </div>
       {notifications}
-      {isLoggedIn ? <p>Welcome back, user!</p> : <p>Please log in to see your dashboard.</p>}
     </div> : (login)
   )
 }
