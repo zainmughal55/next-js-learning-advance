@@ -33,3 +33,23 @@ export async function PATCH(request: Request, { params }: { params: Promise<{ id
     });
   }
 }
+
+export async function DELETE(_request: Request, { params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const commentIndex = comments.findIndex(c => c.id === parseInt(id));
+  const deletedComment = comments[commentIndex];
+  if (commentIndex !== -1) {
+    comments.splice(commentIndex, 1);
+    console.log(comments)
+    return new Response(JSON.stringify(deletedComment), {
+      headers: { 'Content-Type': 'application/json' },
+      status: 200,
+    });
+  } else {
+    return new Response(JSON.stringify({ error: "Comment not found" }), {
+      headers: { 'Content-Type': 'application/json' },
+      status: 404
+    });
+  }
+
+}
